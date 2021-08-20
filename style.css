@@ -1,10 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    font-family: 'Times New Roman', Times, serif;
     outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 header{
     padding: 12px 0;
@@ -27,9 +27,10 @@ header .left h1{
     font-size: 28px;
     font-weight: 600;
 
-    background-image: linear-gradient(to top, black, steelblue, rebeccapurple);
-    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom, steelblue, rebeccapurple);
+    background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
 }
 header .right ul li{
     display: inline-block;
@@ -40,27 +41,27 @@ header .right ul li a{
     cursor: pointer;
     font-size: 20px;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.4);
+    color: #DBDBDB;
     padding: 2px;
 }
 
 header .right ul li a:before{
     content: attr(data-text);
     position: absolute;
-    overflow-y: hidden;
-    background-image: linear-gradient(to bottom, black, steelblue, rebeccapurple);
-    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to bottom,steelblue, rebeccapurple);
+    background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
     white-space: nowrap;
     overflow: hidden;
 }
 header .right ul:hover li a:before{
-    animation: animate 0.75s steps(10) forwards;
+    animation: animate 0.75s steps(20) forwards;
 }
 
 @keyframes animate {
     0%{
-        width: 60px;
+        width: 80px;
     }
     100%{
         width: 0px;
@@ -68,7 +69,7 @@ header .right ul:hover li a:before{
 }
 
 header .right ul li:hover a:before{
-    animation: animateTwo 0.75s steps(10) forwards;
+    animation: animateTwo 0.75s steps(20) forwards;
 }
 
 @keyframes animateTwo {
@@ -76,6 +77,6 @@ header .right ul li:hover a:before{
         width: 0px;
     }
     100%{
-        width: 60px;
+        width: 80px;
     }
 }
