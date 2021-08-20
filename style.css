@@ -6,13 +6,6 @@
     font-family: 'Times New Roman', Times, serif;
     outline: none;
 }
-input[type="button"]{
-    cursor: pointer;
-    font-size: large;
-    font-weight: 400;
-    border-radius: 5px;
-    padding: 2px
-}
 header{
     padding: 12px 0;
     border-bottom: 2px solid #DBDBDB;
@@ -30,7 +23,59 @@ header .left, header .right{
     margin: auto 0;
     list-style-type: none;
 }
+header .left h1{
+    font-size: 28px;
+    font-weight: 600;
+
+    background-image: linear-gradient(to top, black, steelblue, rebeccapurple);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
 header .right ul li{
     display: inline-block;
     margin: 0px 7px;
+}
+header .right ul li a{
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.4);
+    padding: 2px;
+}
+
+header .right ul li a:before{
+    content: attr(data-text);
+    position: absolute;
+    overflow-y: hidden;
+    background-image: linear-gradient(to bottom, black, steelblue, rebeccapurple);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    white-space: nowrap;
+    overflow: hidden;
+}
+header .right ul:hover li a:before{
+    animation: animate 0.75s steps(10) forwards;
+}
+
+@keyframes animate {
+    0%{
+        width: 60px;
+    }
+    100%{
+        width: 0px;
+    }
+}
+
+header .right ul li:hover a:before{
+    animation: animateTwo 0.75s steps(10) forwards;
+}
+
+@keyframes animateTwo {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 60px;
+    }
 }
