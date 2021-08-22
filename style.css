@@ -7,6 +7,9 @@
     box-sizing: border-box;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+#hidden{
+    display: none;
+}
 header{
     padding: 12px 0;
     border-bottom: 2px solid #DBDBDB;
@@ -79,7 +82,6 @@ header .left ul li a:before{
 header .left ul li:hover a{
     border-bottom: 1px solid rebeccapurple;
 }
-
 header .left ul:hover li a:before{
     animation: animate 0.75s steps(20) forwards;
 }
@@ -100,5 +102,24 @@ header .left ul li:hover a:before{
     }
     100%{
         width: 90px;
+    }
+}
+@media screen and (max-width:400px){
+    header .right ul li a{
+        width: 40px;
+        height: 40px;
+        font-size: 1.25em;
+    }
+}
+@media screen and (max-width:620px) {
+    header .container{
+        justify-content: center;
+        padding: 0;
+    }
+    header .left{
+        display: none;
+    }
+    header .right ul #hidden{
+        display: flex;
     }
 }
