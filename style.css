@@ -1,3 +1,15 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --violet: #784BFA;
+    --darkblue: #4446D4;
+    --blue: #5681EB;
+    --lightblue: #519AD6;
+    --turquoise: #47D5F5;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -5,121 +17,93 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    font-family:'Segoe UI', Verdana, sans-serif;
 }
-#hidden{
-    display: none;
+
+body{
+    overflow-x: hidden;
 }
+
 header{
-    padding: 12px 0;
-    border-bottom: 2px solid #DBDBDB;
-}
-header .container{
-    margin: 0 auto;
-    padding: 0 25px;
-    max-width: 1000px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 60px;
+    padding: 10px 30px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom: solid rgba(0,0,0,0.05) 0.5px;
+    z-index: 1;
+    transition: width 0.5s, left 0.5s;
 }
-header .left, header .right{
-    margin: auto 0;
+header.active{
+    width: calc(100% - 250px);
+    left: 250px;
 }
-header .right ul{
+header .logo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.25em;
+    letter-spacing: 3.5px;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to bottom left, var(--violet), var(--turquoise));
+}
+header .toggle{
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--violet);
+}
+
+nav{
+    position: fixed;
+    width: 0;
+    height: 100%;
+    border-right: solid rgba(0,0,0,0.05) 0.5px;
     display: flex;
-}
-header .right ul li{
-    margin: 5px 10px;
-}
-header .right ul li a{
-    width: 45px;
-    height: 45px;
-    display: flex;
-    background: transparent;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    font-size: 1.4em;
-    background-image: linear-gradient(to bottom,steelblue, rebeccapurple);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: 700;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    transition: 0.5s;
-}
-header .right ul li a:hover{
-    background: linear-gradient(to bottom,steelblue, rebeccapurple);
-    color: #fff;
-    font-size: 1.75em;
-    text-shadow: none;
-    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
-}
-header .left ul li{
-    display: inline-block;
-    margin: 0px 10px;
-}
-header .left ul li a{
-    position: relative;
-    cursor: pointer;
-    font-size: 1.4em;
-    font-weight: 500;
-    color: #DBDBDB;
-    padding: 2px;
-}
-header .left ul li a:before{
-    content: attr(data-text);
-    position: absolute;
-    background-image: linear-gradient(to bottom,steelblue, rebeccapurple);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    white-space: nowrap;
     overflow: hidden;
+    transition: width 0.5s, left 0.5s;
 }
-header .left ul li:hover a{
-    border-bottom: 1px solid rebeccapurple;
+nav.active{
+    width: 250px;
 }
-header .left ul:hover li a:before{
-    animation: animate 0.75s steps(20) forwards;
+nav ul{
+    width: 100%;
 }
-@keyframes animate {
-    0%{
-        width: 90px;
-    }
-    100%{
-        width: 0px;
-    }
+nav ul li{
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px;
 }
-header .left ul li:hover a:before{
-    animation: animateTwo 0.75s steps(20) forwards;
+nav ul li a{
+    opacity: 0.6;
+    font-weight: 500;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    color: var(--blue);
+    text-transform: uppercase;
+    text-align: center;
 }
-@keyframes animateTwo {
-    0%{
-        width: 0px;
-    }
-    100%{
-        width: 90px;
-    }
+nav ul li a:hover{
+    opacity: 1;
+    color: var(--violet);
 }
-@media screen and (max-width:400px){
-    header .right ul li a{
-        width: 40px;
-        height: 40px;
-        font-size: 1.25em;
-    }
+
+main{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 650px;
+    padding: 10px;
+    transition: width 0.5s, left 0.5s;
 }
-@media screen and (max-width:620px) {
-    header .container{
-        justify-content: center;
-        padding: 0;
-    }
-    header .left{
-        display: none;
-    }
-    header .right ul #hidden{
-        display: flex;
-    }
+main.active{
+    width: calc(100% - 250px);
+    left: 250px;
 }
