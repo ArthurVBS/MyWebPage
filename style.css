@@ -60,16 +60,9 @@ body
 .header-nav-link
 {
     color: aliceblue;
-    letter-spacing: 1px;
-    font-size: 1em;
-    font-weight: 400;
-    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
-}
-
-.header-nav-link:hover
-{
-    color: paleturquoise;
-    text-shadow: 3px 4px 3px #00000040
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 1.2em;
 }
 
 .main
@@ -127,7 +120,6 @@ body
     border-radius: 20px;
     cursor: pointer;
     background-color: aliceblue;
-    transition: background-color 0.5s ease-in-out;
 }
 
 .main-profile-written-button-link
@@ -145,17 +137,6 @@ body
     font-size: 1em;
     font-weight: 400;
     font-family: 'Righteous', cursive;
-}
-
-.main-profile-written-button:hover, .main-profile-written-button:focus
-{
-    background-color: var(--lightviolet);
-    box-shadow: 5px 6px 5px #00000040;
-}
-
-.main-profile-written-button-link:hover
-{
-    color: white;
 }
 
 .main-profile-picture
@@ -236,6 +217,7 @@ body
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 32px;
 }
 
@@ -246,12 +228,6 @@ body
     font-size: 1em;
     font-weight: 400;
     font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
-}
-
-.footer-nav-link:hover
-{
-    color: paleturquoise;
-    text-shadow: 3px 4px 3px #00000040
 }
 
 @keyframes pulse
@@ -276,11 +252,25 @@ body
     .header-logo
     {
         font-size: 1.3em;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .header-logo:hover
+    {
+        letter-spacing: 4px;
     }
 
     .header-nav-link
     {
-        font-size: 1.1em;
+        font-size: 1.5em;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .header-nav-link:hover
+    {
+        color: var(--violet);
+        background-color: aliceblue;
+        text-shadow: 3px 4px 3px #00000040
     }
 
     .main-profile-written
@@ -302,11 +292,23 @@ body
     {
         width: 160px;
         height: 48px;
+        transition: background-color 0.5s ease-in-out;
+    }
+
+    .main-profile-written-button:hover
+    {
+        background-color: var(--lightviolet);
+        box-shadow: 5px 6px 5px #00000040;
     }
 
     .main-profile-written-button-link
     {
         font-size: 1.2em;
+    }
+    
+    .main-profile-written-button-link:hover
+    {
+        color: white;
     }
 
     .main-profile-picture
@@ -337,6 +339,12 @@ body
     .footer-nav-link
     {
         font-size: 1.1em;
+        transition: color 0.5s ease-in-out;
+    }
+
+    .footer-nav-link:hover
+    {
+        color: var(--lightviolet);
+        text-shadow: 2px 3px 2px #00000040
     }
 }
-
