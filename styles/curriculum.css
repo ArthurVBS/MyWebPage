@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root{
+    --violet: #6f53c4;
+    --lightviolet: #a185d5;
+    --darkblue: #2c2e97;
+    --blue: #5681eb;
+    --lightblue: #8cb5d3;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-color: var(--lightblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main
+{
+    display: flex;
+    flex-direction: column; /*Column - Phone / Row - PC*/
+    margin: 16px;
+    background-color: white;
+}
+
+.main-contact
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #103045;
+    width: 100%;
+    min-width: 320px;
+}
+
+.main-contact-profile
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    border-bottom: 1px solid var(--lightblue);
+}
+
+.main-contact-profile-link
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.5em;
+    width: 32px;
+    padding: 4px;
+    transition: all 0.5s ease-in-out;
+}
+
+.main-contact-profile-link:hover
+{
+    color: #103045;
+    background-color: white;
+    text-shadow: 3px 4px 3px #00000040
+}
+
+
+.main-contact-profile-box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-contact-profile-box-picture
+{
+    border-radius: 50%;
+    width: 240px;
+    padding: 8px;
+}
+
+.main-contact-profile-box-title
+{
+    color: white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 1.8em;
+    font-weight: 700;
+    padding: 4px;
+}
+
+.main-contact-profile-box-subtitle
+{
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 400;
+    padding: 4px;
+}
+
+.main-contact-info, .main-contact-education, .main-contact-language
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+}
+
+.main-contact-info-title, .main-contact-education-title, .main-contact-language-title
+{
+    color: white;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 700;
+    width: 100%;
+    padding: 12px 4px;
+}
+
+.main-contact-info ul, .main-contact-education ul, .main-contact-language ul
+{
+    width: 100%;
+}
+
+.main-contact-info-list, .main-contact-education-list, .main-contact-language-list
+{
+    padding: 4px 0px;
+    width: 100%;
+}
+
+.main-contact-info-list-icon
+{
+    color: var(--lightblue);
+    font-size: 1em;
+    padding-right: 8px;
+}
+
+.main-contact-info-list-text
+{
+    color: white;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.main-contact-education-list-year
+{
+    color: var(--lightblue);
+    font-size: 0.9em;
+    font-weight: 300;
+    padding: 4px 0px;
+}
+
+.main-contact-education-list-course
+{
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 4px 0px;
+}
+
+.main-contact-education-list-school
+{
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 4px 0px;
+}
+
+.main-contact-language-list-text
+{
+    color: white;
+    font-weight: 300;
+    font-size: 0.9em;
+}
+
+.main-contact-language-list-percent
+{
+    display: block;
+    background-color: #081520;
+    height: 8px;
+    margin: 8px 0px;
+}
+
+.main-contact-language-list-percent div
+{
+    background-color: var(--lightblue);
+    height: 100%;
+}
+
+.main-about
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    min-width: 320px;
+}
+
+.main-about p
+{
+    padding: 32px;
+}
+
+@media screen and (min-width: 769px)
+
+{
+    .main
+    {
+        flex-direction: row;
+        margin: 32px;
+    }
+    .main-contact
+    {
+        max-width: 420px;
+    }
+    .main-about
+    {
+        max-width: 780px;
+    }
+}
