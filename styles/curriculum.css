@@ -4,11 +4,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 :root{
-    --violet: #6f53c4;
+    --darkviolet: #341933;
     --lightviolet: #a185d5;
-    --darkblue: #2c2e97;
-    --blue: #5681eb;
-    --lightblue: #8cb5d3;
+    --darkblue: #191970;
+    --blue: #001255dd;
+    --lightblue: #87c8e0;
 }
 
 *
@@ -40,13 +40,9 @@ body
 
 .main-contact
 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #103045;
+    background-color: var(--blue);
     width: 100%;
-    min-width: 320px;
+    padding: 16px;
 }
 
 .main-contact-profile
@@ -55,7 +51,6 @@ body
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    padding: 16px;
     border-bottom: 1px solid var(--lightblue);
 }
 
@@ -102,6 +97,7 @@ body
     text-transform: uppercase;
     font-size: 1.8em;
     font-weight: 700;
+    text-align: center;
     padding: 4px;
 }
 
@@ -111,7 +107,9 @@ body
     text-transform: uppercase;
     font-size: 1.3em;
     font-weight: 400;
+    text-align: center;
     padding: 4px;
+    padding-bottom: 16px;
 }
 
 .main-contact-info, .main-contact-education, .main-contact-language
@@ -121,7 +119,6 @@ body
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    padding: 16px;
 }
 
 .main-contact-info-title, .main-contact-education-title, .main-contact-language-title
@@ -132,7 +129,7 @@ body
     font-size: 1.3em;
     font-weight: 700;
     width: 100%;
-    padding: 12px 4px;
+    padding: 16px 0px;
 }
 
 .main-contact-info ul, .main-contact-education ul, .main-contact-language ul
@@ -206,19 +203,144 @@ body
     height: 100%;
 }
 
-.main-about
+.about.section
+{
+    background-color: white;
+    padding: 16px;
+}
+
+.about.box
+{
+    padding: 16px;
+}
+
+.about.title
+{
+    color: var(--blue);
+    font-size: 1.7em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 0px;
+}
+
+.about.icon
+{
+    color: var(--lightblue);
+    padding: 4px 0px;
+}
+
+.about.paragraph
+{
+    color: #333;
+    padding: 4px 0px;
+    text-align: justify;
+}
+
+.about.paragraph.profile
+{
+    text-indent: 16px;
+}
+
+.about.box.experience
+{
+    display: none;
+}
+
+.about.box.experience div
 {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    min-width: 320px;
 }
 
-.main-about p
+.about.subtitle.experience.name
 {
-    padding: 32px;
+    text-transform: uppercase;
+    color: var(--blue);
+    font-size: 1em;
+    font-weight: 700;
+    padding: 4px 0px;
+}
+
+.about.subtitle.experience.year, .about.subtitle.experience.company
+{
+    text-transform: uppercase;
+    color: var(--lightviolet);
+    font-size: 0.9em;
+    font-weight: 400;
+    padding: 4px 0px;
+}
+
+.about.subbox.experience
+{
+    min-width: 150px;
+}
+
+.about.subbox.experience.year_company
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about.box.projects div
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.about.icon.projects i
+{
+    margin-right: 4px;
+}
+
+.about.subtitle.projects
+{
+    color: #333;
+    font-size: 1.1em;
+    font-weight: 700;
+    padding: 4px 0px;
+}
+
+.about.subtitle.skills
+{
+    text-transform: uppercase;
+    color: var(--lightviolet);
+    font-size: 0.9em;
+    font-weight: 400;
+    padding: 4px 0px;
+}
+
+.about.percent.skills
+{
+    width: 100%;
+    height: 10px;
+    background-color: whitesmoke;
+}
+
+.about.percent.skills div
+{
+    height: 100%;
+    background-color: var(--lightblue);
+}
+
+.about.interest ul
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.about.interest ul li
+{
+    color: #333;
+    font-weight: 500;
+    padding: 10px 0;
 }
 
 @media screen and (min-width: 769px)
@@ -233,8 +355,20 @@ body
     {
         max-width: 420px;
     }
-    .main-about
+    .about.section
     {
         max-width: 780px;
     }
+
+    .about.box.experience
+    {
+        flex-direction: row;
+    }
+    
+    .main-about-experience-box-year_company
+    {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
 }
