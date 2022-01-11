@@ -3,12 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-:root{
-    --darkviolet: #341933;
-    --lightviolet: #a185d5;
-    --darkblue: #191970;
-    --blue: #001255dd;
-    --lightblue: #87c8e0;
+:root
+{
+    --darkblue: #080C21;
+    --blue: #191970;
+    --cyan: #ADD8E6;
+    --lightblue: #469BD2;
+    --lightviolet: #A185D5;
 }
 
 *
@@ -24,7 +25,7 @@
 
 body
 {
-    background-color: var(--lightblue);
+    background-color: var(--cyan);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +43,7 @@ body
 {
     background-color: var(--blue);
     width: 100%;
+    min-width: 300px;
     padding: 16px;
 }
 
@@ -51,7 +53,7 @@ body
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    border-bottom: 1px solid var(--lightblue);
+    border-bottom: 1px solid var(--cyan);
 }
 
 .main-contact-profile-link
@@ -104,7 +106,6 @@ body
 .main-contact-profile-box-subtitle
 {
     color: white;
-    text-transform: uppercase;
     font-size: 1.3em;
     font-weight: 400;
     text-align: center;
@@ -145,7 +146,7 @@ body
 
 .main-contact-info-list-icon
 {
-    color: var(--lightblue);
+    color: var(--cyan);
     font-size: 1em;
     padding-right: 8px;
 }
@@ -159,7 +160,7 @@ body
 
 .main-contact-education-list-year
 {
-    color: var(--lightblue);
+    color: var(--cyan);
     font-size: 0.9em;
     font-weight: 300;
     padding: 4px 0px;
@@ -199,7 +200,7 @@ body
 
 .main-contact-language-list-percent div
 {
-    background-color: var(--lightblue);
+    background-color: var(--cyan);
     height: 100%;
 }
 
@@ -226,7 +227,7 @@ body
 
 .about.icon
 {
-    color: var(--lightblue);
+    color: var(--cyan);
     padding: 4px 0px;
 }
 
@@ -324,7 +325,7 @@ body
 .about.percent.skills div
 {
     height: 100%;
-    background-color: var(--lightblue);
+    background-color: var(--cyan);
 }
 
 .about.interest ul
