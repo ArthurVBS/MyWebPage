@@ -1,3 +1,7 @@
+<h1 align="center">Home Page</h1>
+<p align="center">Uma simples, porém bela página web - para mim... 🕸️📲💻</p>
+
+<br>
 <div align="center">
   <img src="https://img.shields.io/badge/License-MIT-000?style=social&logo=json&logoColor=469BD2">
   &nbsp;
@@ -8,11 +12,8 @@
   <img src="https://img.shields.io/badge/CSS-000?style=social&logo=css3&logoColor=469BD2">
   &nbsp;
   <img src="https://img.shields.io/badge/JavaScript-000?style=social&logo=javascript&logoColor=469BD2">
-  
-  <h1 align="center">Home Page</h1>
-  <p align="center">Uma simples, porém bela página web - para mim... 🕸️📲💻</p>
-  <br><br>
 </div>
+<br>
 
 ## 💻 Situação do projeto:</h3>
 
@@ -26,7 +27,8 @@
 
 ## 📝 Features:
 
-- [x] Responsividade
+- [x] Responsividade (mobile first)
+- [x] Utilizar a API do github (foto)
 
 ## ⚙️ Pré-requisitos:
 
