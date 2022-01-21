@@ -30,7 +30,8 @@ html
 
 body
 {
-    background: url("/images/wallpaper.png");
+    background-image: url("../images/wallpaper.png");
+    background-color: var(--darkblue);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -249,7 +250,8 @@ footer > .waves > .wave
     left: 0;
     width: 100%;
     height: 100px;
-    background:var(--darkblue) url(/images/wave.png);
+    background-image:url("../images/wave.png");
+    background-color: var(--darkblue);
     background-size: 1000px 100px;
 }
 
