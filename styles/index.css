@@ -94,7 +94,7 @@ header > nav > .link:hover
 
 main > .profile
 {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap-reverse;
