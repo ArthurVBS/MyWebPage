@@ -235,11 +235,10 @@ footer
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
     min-height: 100px;
     background-color: var(--blue);
-    padding: 16px;
     margin-top: 100px;
 }
 
@@ -284,7 +283,7 @@ footer > .icon, .menu
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 24px 4px;
+    margin: 24px 12px;
     gap: 12px;
 }
 
@@ -302,7 +301,7 @@ footer > .icon > li > a:hover
     transform: translateY(-8px);
 }
 
-footer .menu > li > a
+footer > .menu > li > a
 {
     font-size: 1.2em;
     color: #fff;
@@ -311,9 +310,30 @@ footer .menu > li > a
     transition: all 0.5s;
 }
 
-footer .menu > li > a:hover
+footer > .menu > li > a:hover
 {
     opacity: 1;
+    letter-spacing: 1px;
+}
+
+footer > .paragraph
+{
+    background-color: #00000040;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 16px;
+}
+
+footer > .paragraph > a
+{
+    color: white;
+    text-decoration: underline wavy var(--mediumblue);
+    transition: all 0.5s;
+}
+
+footer > .paragraph > a:hover
+{
     letter-spacing: 1px;
 }
 
